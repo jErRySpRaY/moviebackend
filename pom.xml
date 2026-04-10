@@ -21,20 +21,27 @@
 
     <dependencies>
 
-        <!-- SPRING BOOT WEB -->
+        <!-- ⭐ MySQL JDBC Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-		
-		
-		<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20231013</version>
-</dependency>
 
-        <!-- YOUR MOVIE CHOOSER JAR -->
+        <!-- JSON library -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+
+        <!-- Your MovieChoose JAR -->
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>MovieChoose</artifactId>
@@ -47,9 +54,13 @@
 
     <build>
         <plugins>
+            <!-- ⭐ Ensures all dependencies (including system-scope JARs) are packaged -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -1,37 +1,33 @@
-# Maven build directory
+HELP.md
 target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Logs
-*.log
-
-# IntelliJ IDEA
-.idea/
-*.iml
-out/
-
-# VS Code
-.vscode/
-
-# Eclipse
-.project
+### STS ###
+.apt_generated
 .classpath
-.settings/
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# OS junk
-.DS_Store
-Thumbs.db
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# Environment variables / secrets
-.env
-*.env
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Java
-*.class
-
-# Backup files
-*.swp
-*.swo
-*~
-
-# Spring Boot devtools cache
-.spring-boot-devtools.properties
+### VS Code ###
+.vscode/

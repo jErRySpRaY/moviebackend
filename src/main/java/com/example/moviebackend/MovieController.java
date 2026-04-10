@@ -8,7 +8,10 @@ import com.example.moviebackend.logic.MySQLConnector;
 import com.example.moviebackend.logic.Movie;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://moviebackend-production-b190.up.railway.app"
+})
 public class MovieController {
 
     @GetMapping("/pickMovie")
